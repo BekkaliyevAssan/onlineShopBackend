@@ -6,6 +6,11 @@ class CategoryS(serializers.ModelSerializer):
         model = models.Category
         fields = 'id', 'name'
 
+class OrderS(serializers.ModelSerializer):
+    class Meta:
+        model = models.Order
+        fields = 'id', 'user', 'phoneNumber', 'address'
+
 class SubcategoryS(serializers.Serializer):
     id = serializers.IntegerField(required=False)
     name = serializers.CharField()

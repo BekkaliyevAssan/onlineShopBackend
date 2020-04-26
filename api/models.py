@@ -14,3 +14,9 @@ class Product(models.Model):
     subcategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE, blank=True, null=True)
     image = models.CharField(max_length=600)
     price = models.FloatField()
+
+class Order(models.Model):
+    user = models.CharField(max_length=500)
+    phoneNumber = models.CharField(max_length=500)
+    address = models.CharField(max_length=500)
+
